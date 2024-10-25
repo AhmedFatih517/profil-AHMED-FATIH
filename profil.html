@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="projet.css">
+    <title>Mon Profil Avancé</title>
+</head>
+<body>
+    <header>
+        <h1>AHMED FATIH</h1>
+    </header>
+
+    <section>
+        <h2>À Propos de Moi</h2>
+        <p>Ahmed, un étudiant de 21 ans en troisième année d'ingénierie informatique et réseaux, vit à Casablanca, une ville dynamique et cosmopolite du Maroc. Passionné par la technologie depuis son enfance, j'ai choisi cette filière pour explorer les vastes possibilités offertes par le monde numérique. En plus de mes études,  Dans les temps libres, je  joue à des jeux vidéo, lire des livres de science-fiction et se retrouver avec ses amis pour partager des idées sur les dernières tendances technologiques, mon rêve est de contribuer au développement de solutions technologiques qui amélioreront la vie quotidienne .</p>
+        <img src="Ahmed.jpg" alt="Moi" style="width: 200px; height: auto;">
+    </section>
+
+    <section>
+        <h2>Hobbies</h2>
+        <ul>
+            <li>Football</li>
+            <li>Voyages</li>
+            <li>Jeux vidéo</li>
+        </ul>
+    </section>
+    <section>
+        <h2>Objectifs</h2>
+        <ol>
+            <li>Apprendre une nouvelle compétence</li>
+            <li>Participer à un projet artistique</li>
+            <li>Réussir mes études</li>
+        </ol>
+    </section>
+
+    <section>
+        <h2>Tableau d'Amis</h2>
+        <table>
+            <tr>
+                <th>Nom</th>
+                <th>Âge</th>
+                <th>Ville</th>
+                <th>Profil</th>
+            </tr>
+            <tr>
+                <td>Youssef </td>
+                <td>22</td>
+                <td>Paris</td>
+                <td><a href="profil_Youssef.html">Voir Profil</a></td>
+            </tr>
+            <tr>
+                <td>Yassine</td>
+                <td>21</td>
+                <td>italie</td>
+                <td><a href="profil_Yassine.html">Voir Profil</a></td>
+            </tr>
+            <tr>
+                <td>Anass</td>
+                <td>19</td>
+                <td>Espagne</td>
+                <td><a href="profil_Anass.html">Voir Profil</a></td>
+            </tr>
+        </table>
+    </section>
+
+    <section>
+        <h2>Contactez-moi</h2>
+        <form id="contactForm" onsubmit="return validateForm()">
+            <label for="name">Nom:</label>
+            <input type="text" id="name" name="name" required>
+            <br>
+            
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <br>
+            
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" required></textarea>
+            <br>
+            
+            <button type="submit">Soumettre</button>
+        </form>
+    </section>
+    <script>
+        function validateForm() {
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+
+            if (name === "") {
+                alert("Le nom est requis.");
+                return false;
+            }
+
+            const emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+            if (!email.match(emailPattern)) {
+                alert("Veuillez entrer un email valide.");
+                return false;
+            }
+
+            alert("Formulaire soumis avec succès !");
+            return true;
+        }
+    </script>
+</body>
+</html>
